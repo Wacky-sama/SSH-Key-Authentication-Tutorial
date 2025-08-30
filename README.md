@@ -30,6 +30,7 @@ Method 1 - Using ssh-copy-id:
 ssh-copy-id username@server_ip
 ```
 This appends your public key to the server’s ~/.ssh/authorized_keys.
+
 Method 2 - Manual:
 ```bash
 scp ~/.ssh/id_ed25519.pub username@server_ip:~/
@@ -45,6 +46,7 @@ rm ~/id_ed25519.pub
 From the client:
 ```bash
 ssh username@server_ip
+
 ```
 If it logs in without a password, key authentication is working.
 
@@ -54,8 +56,10 @@ On the server:
 sudo nano /etc/ssh/sshd_config
 ```
 Set the following:
-**PasswordAuthentication no**
-**PubkeyAuthentication yes**
+```bash
+PasswordAuthentication no
+PubkeyAuthentication yes
+```
 
 Restart SSH:
 ```bash
