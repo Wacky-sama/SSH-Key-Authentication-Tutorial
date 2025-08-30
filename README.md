@@ -69,11 +69,11 @@ Create/edit on the client:
 nano ~/.ssh/config
 ```
 Example config:
-**Host myserver**
-    **HostName server_ip**
-    **User username**
-    **IdentityFile ~/.ssh/id_ed25519**
-    **IdentitiesOnly yes**
+-**Host myserver**
+   -**HostName server_ip**
+   - **User username**
+   - **IdentityFile ~/.ssh/id_ed25519**
+   - **IdentitiesOnly yes**
 
 Now connect with:
 ```bash
